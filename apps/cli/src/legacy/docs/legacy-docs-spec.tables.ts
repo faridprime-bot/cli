@@ -39,6 +39,7 @@ export const LEGACY_DOCS_INFO_TAGS: ReadonlyArray<LegacyDocsInfoTag> = [
 
 /** Docs-site section tag per top-level command. */
 export const LEGACY_DOCS_TAGS: Readonly<Record<string, ReadonlyArray<string>>> = {
+  "supabase-apps": ["management-api"],
   "supabase-bootstrap": ["quick-start"],
   "supabase-backups": ["management-api"],
   "supabase-branches": ["management-api"],
