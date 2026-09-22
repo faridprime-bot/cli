@@ -1,5 +1,6 @@
 import { Effect, Layer, Option } from "effect";
 import { Command } from "effect/unstable/cli";
+import { legacyAppsCommand } from "../commands/apps/apps.command.ts";
 import { legacyBackupsCommand } from "../commands/backups/backups.command.ts";
 import { legacyBootstrapCommand } from "../commands/bootstrap/bootstrap.command.ts";
 import { legacyBranchesCommand } from "../commands/branches/branches.command.ts";
@@ -62,6 +63,7 @@ import {
 export const legacyRoot = Command.make("supabase").pipe(
   Command.withDescription("Supabase CLI (stable channel)."),
   Command.withSubcommands([
+    legacyAppsCommand,
     legacyBackupsCommand,
     legacyBootstrapCommand,
     legacyBranchesCommand,
